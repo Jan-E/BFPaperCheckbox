@@ -137,12 +137,13 @@
 
 - (IBAction)tapped:(UIButton *)sender {
     BOOL animate;
+    animate = NO;
     if (sender.tag == 2001) {       // animate button tag
         animate = YES;
     }
-    else if (sender.tag == 2002) {  // static button tag
-        animate = NO;
-    }
+//    else if (sender.tag == 2002) {  // static button tag
+//        animate = NO;
+//    }
     // Animate our standard switch:
     if (self.standardSwitch.isOn) {
         [self.standardSwitch setOn:NO animated:animate];

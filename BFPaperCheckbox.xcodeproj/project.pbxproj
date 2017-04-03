@@ -251,6 +251,9 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Bence Feher";
 				TargetAttributes = {
+					F40AB58E197DE209008EC959 = {
+						DevelopmentTeam = 7J77685L3X;
+					};
 					F40AB5AF197DE209008EC959 = {
 						TestTargetID = F40AB58E197DE209008EC959;
 					};
@@ -548,12 +551,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7J77685L3X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BFPaperCheckbox/BFPaperCheckbox-Prefix.pch";
 				INFOPLIST_FILE = "BFPaperCheckbox/BFPaperCheckbox-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bencefeher.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -564,12 +569,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7J77685L3X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BFPaperCheckbox/BFPaperCheckbox-Prefix.pch";
 				INFOPLIST_FILE = "BFPaperCheckbox/BFPaperCheckbox-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bencefeher.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
