@@ -68,6 +68,7 @@
 		F40AB5BD197DE209008EC959 /* BFPaperCheckboxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BFPaperCheckboxTests.m; sourceTree = "<group>"; };
 		F40AB5C7197DE2CB008EC959 /* BFPaperCheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFPaperCheckbox.h; path = Classes/BFPaperCheckbox.h; sourceTree = SOURCE_ROOT; };
 		F40AB5C8197DE2CB008EC959 /* BFPaperCheckbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFPaperCheckbox.m; path = Classes/BFPaperCheckbox.m; sourceTree = SOURCE_ROOT; };
+		F76AC382243B95390092ADD1 /* BFPaperCheckbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BFPaperCheckbox.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +146,7 @@
 		F40AB598197DE209008EC959 /* BFPaperCheckbox */ = {
 			isa = PBXGroup;
 			children = (
+				F76AC382243B95390092ADD1 /* BFPaperCheckbox.entitlements */,
 				F40AB5CA197DE2CF008EC959 /* Classes */,
 				F40AB5A4197DE209008EC959 /* Main.storyboard */,
 				F40AB5A7197DE209008EC959 /* BFPaperViewController.h */,
@@ -263,6 +265,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -536,6 +539,7 @@
 			baseConfigurationReference = 27E048C28C0139383E3CB039 /* Pods-BFPaperCheckbox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BFPaperCheckbox/BFPaperCheckbox.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7J77685L3X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -544,7 +548,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bencefeher.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -554,6 +559,7 @@
 			baseConfigurationReference = CEF77EB02D26F2B6F6645610 /* Pods-BFPaperCheckbox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BFPaperCheckbox/BFPaperCheckbox.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7J77685L3X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -562,7 +568,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bencefeher.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
+				SUPPORTS_MACCATALYST = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
