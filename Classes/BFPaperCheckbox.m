@@ -262,7 +262,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
     tapGestureRecognizer.delegate = self;
     [self addGestureRecognizer:tapGestureRecognizer];
     
-    [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:)];
+    //[UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:)];
 }
 
 
@@ -282,20 +282,20 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
 #pragma mark - IBAction/Callback Handlers
 - (void)paperTouchDown:(BFPaperCheckbox *)sender
 {
-    //NSLog(@"Touch down handler");
+    NSLog(@"Touch down handler");
     [self growTapCircle];
 }
 
 
 - (void)paperTouchUp:(BFPaperCheckbox *)sender
 {
-    //NSLog(@"Touch Up handler");
+    NSLog(@"Touch Up handler");
     [self fadeTapCircleOut];
 }
 
 - (void)paperTouchUpAndSwitchStates:(BFPaperCheckbox *)sender
 {
-    //NSLog(@"Touch Up handler with switching states");
+    NSLog(@"Touch Up handler with switching states");
     if (!self.finishedAnimations) {
         [self fadeTapCircleOut];
         return;
@@ -486,7 +486,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
     CABasicAnimation *tapCircleGrowthAnimation = [CABasicAnimation animationWithKeyPath:@"path"];
     tapCircleGrowthAnimation.delegate = self;
     [tapCircleGrowthAnimation setValue:@"tapGrowth" forKey:@"id"];
-    [UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:)];
+    //[UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:)];
     tapCircleGrowthAnimation.duration = self.touchDownAnimationDuration;
     tapCircleGrowthAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     tapCircleGrowthAnimation.fromValue = (__bridge id)startingCirclePath.CGPath;
@@ -1042,7 +1042,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
         if (self.checkboxSidesCompletedAnimating >= 4) {
             self.checkboxSidesCompletedAnimating = 0;
             self.finishedAnimations = YES;
-            //NSLog(@"FINISHED drawing BOX");
+            NSLog(@"FINISHED drawing BOX");
         }
     }
     // Shrink away checkBOX:
@@ -1072,7 +1072,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
         self.checkboxSidesCompletedAnimating++;
         
         if (self.checkboxSidesCompletedAnimating >= 4) {
-            //NSLog(@"FINISHED spinning box CW");
+            NSLog(@"FINISHED spinning box CW");
             self.checkboxSidesCompletedAnimating = 0;
             [self shrinkAwayCheckboxAnimated:YES];
         }
@@ -1088,11 +1088,11 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
         self.checkboxSidesCompletedAnimating++;
         
         if (self.checkboxSidesCompletedAnimating >= 4) {
-            //NSLog(@"FINISHED spinning box CCW");
+            NSLog(@"FINISHED spinning box CCW");
             self.checkboxSidesCompletedAnimating = 0;
             self.finishedAnimations = YES;
             [self drawCheckBoxAnimated:YES];
-            //NSLog(@"FINISHED animating 4 sides of checkbox");
+            NSLog(@"FINISHED animating 4 sides of checkbox");
         }
     }
     // Draw checkMARK
@@ -1103,7 +1103,7 @@ static NSString *const mark_eraseLongLine = @"largeCheckmarkLine2";
         if (self.checkmarkSidesCompletedAnimating >= 2) {
             self.checkmarkSidesCompletedAnimating = 0;
             self.finishedAnimations = YES;
-            //NSLog(@"FINISHED drawing checkmark");
+            NSLog(@"FINISHED drawing checkmark");
         }
     }
     // Shrink checkMARK:
